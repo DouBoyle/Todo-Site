@@ -15,7 +15,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,11 +28,109 @@
   color: #61dafb;
 }
 
+.AddTask {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  margin-top: 8px;
+  font-size: calc(10px + 2vmin);
+}
+
+.Task {
+  border-style: dotted;
+  margin: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.taskName {
+ font-size: 20px;
+ margin: 12px;
+}
+
+.description {
+  font-size: 20px;
+  margin: 12px;
+ }
+
+ .done {
+  min-height: 50px;
+  min-width: 60px;
+  font-size: 20px;
+ }
+
+ .modal {
+  font-size: 12px;
+  background: #dddddd;
+}
+.modal > .header {
+  width: 100%;
+  border-bottom: 1px solid gray;
+  font-size: 18px;
+  text-align: center;
+  padding: 5px;
+}
+.modal > .content {
+  width: 100%;
+  padding: 10px 5px;
+}
+.modal > .actions {
+  width: 100%;
+  padding: 10px 5px;
+  margin: auto;
+  text-align: center;
+}
+.modal > .close {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  padding: 2px 5px;
+  line-height: 20px;
+  right: -10px;
+  top: -10px;
+  font-size: 24px;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #cfcece;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media (min-width: 600px) {
+  .Task {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 8px;
+  }
+  .App-header {
+    flex-direction: row;
+    justify-content: left;
+  }
+  h2 {
+    margin: auto;
+  }
+  h1 {
+    margin: auto;
+  }
+  .taskName {
+    width: 30%;
+  }
+  .description {
+    width: 30%;
+  }
+ }
+
+@media (min-width: 816px) {
+  .Task {
+    margin: 8px auto;
   }
 }
